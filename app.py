@@ -32,7 +32,7 @@ def analyze_text(input_text):
     
     try:
         genai.configure(api_key=api_key)
-        model = genai.GenerativeModel('gemini-1.5-pro', system_instruction=SYSTEM_PROMPT)
+        model = genai.GenerativeModel('gemini-2.5-flash', system_instruction=SYSTEM_PROMPT)
         
         with st.spinner("Auditing legal documents... Please wait."):
             response = model.generate_content(input_text)
